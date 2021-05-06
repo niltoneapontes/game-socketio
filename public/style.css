@@ -7,6 +7,7 @@
 }
 
 .modal {
+  border-radius: 8px;
   background-color: #323232;
 }
 
@@ -15,10 +16,16 @@
 }
 
 .modal .modal-footer .btn-flat {
+  background-color: #26a69a;
   color: #E5E5E5;
 }
 
+.modal .modal-footer .btn-flat:hover {
+  background-color: #257c73;
+}
+
 .modal .modal-footer .btn-flat:disabled {
+  background: transparent;
   color: #484848 !important;
 }
 
@@ -59,4 +66,12 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
+}
+
+.input-field.col {
+  margin-top: 24px;
+}
+
+.input-field.col label {
+  left: 0;
 }
