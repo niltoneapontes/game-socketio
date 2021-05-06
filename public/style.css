@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   outline: none;
+  font-family: 'Anton', sans-serif;
 }
 
 #field {
@@ -31,6 +32,9 @@
   width: 70px;
   height: 70px;
   position: absolute;
-  color: red;
+  color: white;
   text-align: center;
+  font-size: 12px;
+  text-transform: lowercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
