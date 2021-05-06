@@ -16,6 +16,7 @@
   width: 52px;
   height: 52px;
   position: absolute;
+  cursor: none;
 }
 
 .enemy {
