@@ -15,6 +15,10 @@ io.on('connection', socket => {
 
   socket.on('playerPosition', ({ id, x, y }) => {
     socket.broadcast.emit('enemyPosition', { id, x, y })
+  });
+
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('removeUser', socket.id);
   })
 });
 

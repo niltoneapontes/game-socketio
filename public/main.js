@@ -31,5 +31,9 @@ socket.on('userJoin', (id) => {
 
     document.getElementById(`${id}`).style.left = `${x}px`;
     document.getElementById(`${id}`).style.top = `${y}px`;
+  });
+
+  socket.on('removeUser', (id) => {
+    document.getElementById(id).remove();
   })
-})
+});
