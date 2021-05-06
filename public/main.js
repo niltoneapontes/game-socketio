@@ -43,6 +43,7 @@ socket.on('userJoin', (id) => {
     const enemyPosition = document.createElement('div');
     enemyPosition.classList.add('enemy');
     enemyPosition.id = enemyId;
+    enemyPosition.innerText = enemyNickname;
     document.querySelector('.main-container').appendChild(enemyPosition);
   });
   
@@ -60,6 +61,8 @@ socket.on('userJoin', (id) => {
   });
 
   socket.on('removeUser', (id) => {
+    var toastHTML = `<span>${enemyNickname} acabou de entrar!</span>`;
+    M.toast({html: toastHTML});
     document.getElementById(id).remove();
   })
 });

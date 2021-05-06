@@ -13,15 +13,24 @@
 
 #character {
   background-image: url('/assets/minion.svg');
-  width: 52px;
-  height: 52px;
+  background-position: bottom;
+  background-size: 52px;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
   position: absolute;
-  cursor: none;
+  color: blue;
+  text-align: center;
 }
 
 .enemy {
   background-image: url('/assets/minion.svg');
-  width: 52px;
-  height: 52px;
+  background-position: bottom;
+  background-size: 52px;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
   position: absolute;
+  color: red;
+  text-align: center;
 }
