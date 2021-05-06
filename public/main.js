@@ -25,8 +25,8 @@ function getNickname() {
 
 socket.on('userJoin', (id) => {
   document.getElementById('field').addEventListener('mousemove', (event) => {
-    document.getElementById('character').style.left = `${event.x}px`;
-    document.getElementById('character').style.top = `${event.y}px`;
+    document.getElementById('character').style.left = `${event.x - 50}px`;
+    document.getElementById('character').style.top = `${event.y - 50}px`;
 
     socket.emit('playerPosition', {
       id: id,
@@ -55,14 +55,18 @@ socket.on('userJoin', (id) => {
       enemyPosition.classList.add('enemy');
       enemyPosition.id = id;
       document.querySelector('.main-container').appendChild(enemyPosition);
+      enemyPosition.innerText = nickname;
     }
-    document.getElementById(`${id}`).style.left = `${x}px`;
-    document.getElementById(`${id}`).style.top = `${y}px`;
+    document.getElementById(`${id}`).style.left = `${x - 50}px`;
+    document.getElementById(`${id}`).style.top = `${y - 50}px`;
   });
 
   socket.on('removeUser', (id) => {
-    var toastHTML = `<span>${enemyNickname} acabou de entrar!</span>`;
+    var toastHTML = `<span>${id} acabou de sair!</span>`;
     M.toast({html: toastHTML});
+
+    console.log(document.getElementById(id));
+
     document.getElementById(id).remove();
   })
 });

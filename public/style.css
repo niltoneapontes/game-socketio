@@ -2,7 +2,24 @@
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #E5E5E5;
+}
+
+.modal {
+  background-color: #323232;
+}
+
+.modal .modal-footer {
+  background-color: #282828;
+}
+
+.modal .modal-footer .btn-flat {
+  color: #E5E5E5;
+}
+
+.modal .modal-footer .btn-flat:disabled {
+  color: #484848 !important;
 }
 
 #field {
@@ -15,10 +32,13 @@
 #character {
   background-image: url('/assets/minion.svg');
   background-position: bottom;
-  background-size: 52px;
+  background-size: 80px;
   background-repeat: no-repeat;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   color: blue;
   text-align: center;
@@ -27,14 +47,16 @@
 .enemy {
   background-image: url('/assets/minion.svg');
   background-position: bottom;
-  background-size: 52px;
+  background-size: 80px;
   background-repeat: no-repeat;
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  color: white;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
+  font-family: 'Anton', sans-serif;
   text-transform: lowercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
