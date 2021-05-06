@@ -11,10 +11,14 @@ app.use(express.static(path.join(__dirname, 'public'))); // seta a pasta public 
 
 io.on('connection', socket => {
   socket.emit('userJoin', socket.id);
-  socket.broadcast.emit('enemyJoin', socket.id);
+  socket.on('sendNickname', nickname => {
+    if (nickname) {
+      socket.broadcast.emit('enemyJoin', { enemyId: socket.id, enemyNickname: nickname });
+    }
+  });
 
-  socket.on('playerPosition', ({ id, x, y }) => {
-    socket.broadcast.emit('enemyPosition', { id, x, y })
+  socket.on('playerPosition', ({ id, nickname, x, y }) => {
+    socket.broadcast.emit('enemyPosition', { id, nickname, x, y })
   });
 
   socket.on('disconnect', () => {

@@ -9,15 +9,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"
     integrity="sha512-eVL5Lb9al9FzgR63gDs1MxcDS2wFu3loYAgjIH0+Hg38tCS8Ag62dwKyH+wzDb+QauDpEZjXbMn11blw8cbTJQ=="
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
+  <div class="main-container">
     <div class="field" id="field"></div>
     <div class="character" id="character"></div>
   </div>
-
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Oiê, tudo bem?</h4>
+      <p>Diz um nickname bem único pra a gente começar: </p>
+      <div class="input-field col s6">
+        <input type="text" class="validate" id="nickname" placholder="Digita aqui...">
+        <label for="nickname">Digita aqui...</label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="modal-close waves-effect waves-green btn-flat" onclick="getNickname()"
+        id="sendNickname">Iniciar</a>
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 
