@@ -18,6 +18,7 @@
 .modal .modal-footer .btn-flat {
   background-color: #26a69a;
   color: #E5E5E5;
+  font-weight: bold;
 }
 
 .modal .modal-footer .btn-flat:hover {
